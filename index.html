@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Melody</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<script>
+/* Typing welcome message added by JavaScript (only on index.html) */
+document.addEventListener('DOMContentLoaded', function () {
+  // Text to show (change the sentence below if you want)
+  const fullText = "Welcome to my website! Have a great time here.";
+
+  // Create the box element and insert at the VERY TOP of the page
+  const box = document.createElement('div');
+  box.id = 'welcome-box';
+  box.innerHTML = '<span class="text"></span><span class="cursor">|</span>';
+  document.body.insertBefore(box, document.body.firstChild);
+
+  // Typing effect
+  const textEl = box.querySelector('.text');
+  const cursorEl = box.querySelector('.cursor');
+  let i = 0;
+  const speed = 60; // milliseconds per character (smaller = faster)
+
+  const typer = setInterval(function() {
+    if (i < fullText.length) {
+      textEl.textContent += fullText.charAt(i);
+      i++;
+    } else {
+      clearInterval(typer);
+      // keep cursor blinking for effect; optionally hide after a pause:
+      // setTimeout(() => cursorEl.style.display = 'none', 2000);
+    }
+  }, speed);
+});
+</script>
+
+<div style="text-align:center; margin-top:20px;">
+    <input id="inputname" placeholder="Enter your name">
+    <button onclick="sayHi()">Submit</button>
+    <p id="showname"></p>
+</div>
+
+<script>
+function sayHi() {
+    let name = document.getElementById("inputname").value;
+    document.getElementById("showname").innerHTML = "Hello " + name + ", welcome!";
+}
+</script>
+
+<script>
+function sayHello() {
+    let name = document.getElementById("username").value;
+    document.getElementById("output").innerHTML = "Hello " + name + "! Welcome!";
+}
+</script>
+
+
+<body>
+	<div style="background: yellow; padding: 15px; text-align: center; font-size: 20px;">
+     Original Template Link: 
+     <a href="https://freewebsitetemplates.com/preview/barwebsitetemplate/index.html" target="_blank">
+        https://freewebsitetemplates.com/preview/barwebsitetemplate/index.html
+     </a>
+    </div>
+
+	<div class="header">
+		<div>
+			<ul>
+				<li class="selected">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="events.html">Events</a>
+				</li>
+				<li>
+					<a href="games.html">Games</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+			</ul>
+			<a href="index.html" id="logo"><img src="images/download.png" alt="logo"></a> <img src="images/images-1.jpg" alt="" style="margin-top: 50px;">
+		</div>
+	</div>
+	<div class="body home">
+		<div>
+			<div class="section">
+				<div>
+					<h3><a href="blog.html">Blog</a></h3>
+					<ul>
+						<li>
+							<p>
+								Dim Dim
+							</p>
+							<span>10 Jan &#39;12</span>
+						</li>
+						<li>
+							<p>
+								Ding dang
+							</p>
+							<span>18 Feb &#39;12</span>
+						</li>
+						<li>
+							<p>
+								dome dome
+							</p>
+							<span>17 Mar &#39;12</span>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h3><a href="events.html">Events</a></h3>
+					<ul>
+						<li>
+							<a href="events.html"><img src="images/boys-night.jpg"  alt=""></a>
+							<h4><span>Steve Vai <br> In October</span></h4>
+						</li>
+						<li>
+							<a href="events.html"><img src="images/acoustic-friday.jpg" alt=""></a>
+							<h4><span>Acoustic Friday <br> With Marty</span></h4>
+						</li>
+						<li>
+							<a href="events.html"><img src="images/sexy-poker.jpg" alt=""></a>
+							<h4><span>Rock Fest <br> Tournament</span></h4>
+						</li>
+					</ul>
+				</div>
+				<div class="last">
+					<h3><a href="games.html">Games</a></h3>
+					<ul>
+						<li>
+							<a href="#">Guitar</a>
+						</li>
+						<li>
+							<a href="#">Bass</a>
+						</li>
+						<li>
+							<a href="#">Karaoke Night</a>
+						</li>
+						<li>
+							<a href="#">Drums & Fluet</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="connect">
+			<a href="https://www.martymusic.com/" id="twitter">twitter</a> <a href="https://www.martymusic.com/" id="googleplus">google+</a>
+		</div>
+		<p>
+			&#169; Student ID: 22224543 | Name: Saker Abrar Shariar.
+		</p>
+	</div>
+</body>
+</html>
